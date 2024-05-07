@@ -101,7 +101,7 @@ class AsyncKickTheSpyPetAPI:
 
         async with self.client as req:
             async with req.get(
-                "getBot",
+                self.BASE_URL / "getBot",
                 params={"id": id if not isinstance(id, discord.Guild) else id.id},
             ) as resp:
                 if resp.status == 404:  # not found
@@ -120,7 +120,7 @@ class AsyncKickTheSpyPetAPI:
         """
         async with self.client as req:
             async with req.get(
-                str(self.BASE_URL / "byInv"),
+                self.BASE_URL / "byInv",
                 params={
                     "code": code if not isinstance(code, discord.Invite) else code.id
                 },
@@ -139,7 +139,7 @@ class AsyncKickTheSpyPetAPI:
         """
 
         async with self.client as req:
-            async with req.get("ids") as resp:
+            async with req.get(self.BASE_URL / "ids") as resp:
                 resp.raise_for_status()
                 if use_orjson:
                     return orjson.loads(await resp.text())
