@@ -9,6 +9,7 @@ pip install git+https://github.com/timelessnesses/kickthespypet-api
 # or
 pip install kickthespypet-api
 ```
+You also need `discord` version of your choice (not installed automatically)
 
 ## Examples
 
