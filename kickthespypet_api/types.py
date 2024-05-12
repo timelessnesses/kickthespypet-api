@@ -3,7 +3,6 @@ import typing
 
 Unknown = str | typing.Any | None
 
-
 @dataclasses.dataclass
 class GetBotAPIResponse:
     """
