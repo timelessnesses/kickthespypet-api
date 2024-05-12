@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "kickthespypet-api"
-version = "0.0.4"
+version = "0.0.5"
 description = "kickthespy.pet API wrapper"
 authors = ["timelesnesses <timelessnesses@timelessnesses.me>"]
 readme = "README.md"
